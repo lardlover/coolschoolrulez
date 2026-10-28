@@ -20,7 +20,7 @@ public class DropEnemy : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if ( collision.gameObject.CompareTag("GalagaPlayer"))
+        if (collision.gameObject.CompareTag("PlayerBullet") || collision.gameObject.CompareTag("GalagaPlayer"))
         {
 
             GameObject temp = Instantiate(explosion, transform.position, Quaternion.identity);
